@@ -1,0 +1,95 @@
+/* Tablet Devices (Medium Screens) */
+@media (max-width: 768px) {
+  body {
+    #main-page {
+      #sidebar3 {
+        display: none;
+      }
+
+      #sidebar2 {
+        width: 30vw;
+      }
+
+      .chat-room {
+        width: 70vw;
+      }
+    }
+  }
+}
+
+/* Mobile Devices (Small Screens) */
+@media (max-width: 580px) {
+  body {
+    padding: 0;
+    margin: 0;
+
+    i {
+      font-size: 15px;
+    }
+
+    #main-page {
+
+      #sidebar2 .side2-header {
+        .menuBtn-con {
+          display: block;
+        }
+      }
+      
+      #sidebar3 {
+        display: none;
+      }
+
+      #sidebar1,
+      #friReqShow {
+        width: 100vw;
+
+        .menu,
+        .friReq-list {
+          height: 80vh;
+        }
+      }
+
+      #sidebar2 {
+        width: 100vw;
+        padding: 0;
+
+        .side2-header {
+          background-color: var(--color-light);
+          height: 10vh;
+          display: flex;
+          justify-content: center;
+          border: none;
+          padding: 10px;
+
+          .log-con img {
+            width: 50px;
+          }
+
+          .log-con p {
+            font-size: 25px;
+            margin-left: 2px;
+          }
+
+          h2 {
+            display: none;
+          }
+
+          .searchForm {
+            margin: 5px 0;
+            padding: 6px;
+            display: none;
+          }
+        }
+      }
+
+      .main-container {
+        width: 100vw;
+        display: none;
+
+        .chat-room {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

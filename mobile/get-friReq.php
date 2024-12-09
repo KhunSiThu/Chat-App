@@ -9,8 +9,8 @@ $sql = "select * from friendRequests left join users on users.unique_id = friend
 $Query = mysqli_query($conn, $sql);
 
 $response = '
-<h2>                <a href="../main-page.php" class="desk-dis-none"><i class="fa-solid fa-arrow-left mr-4"></i></a>
- Friend Requests <span class="req-count">' . mysqli_num_rows($Query) . '</span></h2>
+<section>                <a href="../main-page.php" class="desk-dis-none"><i class="fa-solid fa-arrow-left mr-4"></i></a>
+ Friend Requests <span class="req-count">' . mysqli_num_rows($Query) . '</span></section>
 <ul class="friReq-list w-full">
 ';
 
@@ -31,7 +31,7 @@ if (mysqli_num_rows($Query) > 0) {
                 </div>
             </a>
 
-            <a href="../PHP/addFriend.php?friId='.$friReq['unique_id'].'" class=" btn-primary flex justify-center items-center confirm-btn">
+            <a href="./addFriend.php?friId='.$friReq['unique_id'].'" class=" btn-primary flex justify-center items-center confirm-btn">
                 Confirm
             </a>
 

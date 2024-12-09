@@ -12,6 +12,11 @@ if(!empty($uniqueId)) {
     $query = mysqli_query($conn,$sql);
 
     if($query) {
-        header("Location:../main-page.php?search=".$_GET['search']);
+        if(isset($_GET['mobile'])) {
+            header("Location:../mobile/searchFriend.php?search=".$_GET['search']);
+        } else {
+            header("Location:../main-page.php?search=".$_GET['search']);
+        }
+        
     }
 }

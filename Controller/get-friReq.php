@@ -20,7 +20,7 @@ $response = '
     </svg>
 </a>
 
-<ul class="friReq-list w-full">
+<ul class="friReq-list side3FriReq w-full">
 ';
 
 if (mysqli_num_rows($Query) > 0) {
@@ -40,9 +40,9 @@ if (mysqli_num_rows($Query) > 0) {
                 </div>
             </a>
 
-            <a href="../Controller/addFriend.php?friId=' . $friReq['unique_id'] . '" class=" btn-primary flex justify-center items-center confirm-btn">
+            <button data ="../Controller/addFriend.php?friId=' . $friReq['unique_id'] . '" class=" btn-primary flex justify-center items-center confirmBtn">
                 Confirm
-            </a>
+            </button>
 
         </li>';
     }

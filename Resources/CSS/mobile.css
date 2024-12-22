@@ -1,5 +1,9 @@
 @media (max-width: 600px) {
 
+    #chatBox {
+        display: flex;
+    }
+
     #mobile {
         display: block;
     }

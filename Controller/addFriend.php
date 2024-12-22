@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once "db_connect.php";
+include_once "./db_connect.php";
 
 $uniqueId = $_SESSION['unique_id'];
 $friendId = $_GET['friId'];
@@ -27,9 +27,7 @@ if (!empty($uniqueId) && !empty($friendId)) {
             $stmt->bind_param("ii", $friendId, $uniqueId);
 
             if ($stmt->execute()) {
-                // Redirect after successfully adding friend
-                // $redirectPage = isset($_GET['search']) ? "../main-page.php?search=" . urlencode($_GET['search']) : "../main-page.php";
-                header("Location: ../Views/mainPage.php");
+               
                 exit();
             }
         }
@@ -40,9 +38,7 @@ if (!empty($uniqueId) && !empty($friendId)) {
         $stmt->bind_param("iiii", $friendId, $uniqueId, $friendId, $uniqueId);
 
         if ($stmt->execute()) {
-            // Redirect after successfully removing friend
-            // $redirectPage = isset($_GET['search']) ? "../main-page.php?search=" . urlencode($_GET['search']) : "../main-page.php";
-            header("Location: ../Views/mainPage.php");
+          
             exit();
         }
     }

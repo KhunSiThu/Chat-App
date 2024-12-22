@@ -27,9 +27,9 @@
     </div>
 
     <!-- Add Friend Button -->
-    <a href="../Views/mainPage.php?search" class="add-friend-btn btn-primary">
+    <button class="add-friend-btn btn-primary">
         <i class="fa-solid fa-user-plus"></i>
-    </a>
+    </button>
 
 </nav>
 

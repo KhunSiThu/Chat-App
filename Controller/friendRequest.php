@@ -21,8 +21,7 @@ if (!empty($uniqueId) && !empty($friendId)) {
         $stmt = $conn->prepare($insertRequestSql);
         $stmt->bind_param("ii", $uniqueId, $friendId);
         if ($stmt->execute()) {
-            // $redirectPage = isset($_GET['mobile']) ? "../mobile/searchFriend.php" : "../main-page.php";
-            header("Location: ../Views/mainPage.php?search=" . urlencode($_GET['search']));
+           
             exit();
         }
     } else {
@@ -31,8 +30,7 @@ if (!empty($uniqueId) && !empty($friendId)) {
         $stmt = $conn->prepare($deleteRequestSql);
         $stmt->bind_param("iiii", $uniqueId, $friendId, $friendId, $uniqueId);
         if ($stmt->execute()) {
-            // $redirectPage = isset($_GET['mobile']) ? "../mobile/searchFriend.php" : "../main-page.php";
-            header("Location: ../Views/mainPage.php?search=" . urlencode($_GET['search']));
+           
             exit();
         }
     }

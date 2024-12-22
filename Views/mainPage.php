@@ -18,23 +18,13 @@ $uniqueId = $_SESSION['unique_id'];
         <?php require_once "../Components/sidebar2.php"; ?>
 
         <div class="main-container">
-            <?php if (isset($_GET["search"])) { ?>
-                <?php require_once "../Components/searchFriend.php"; ?>
-            <?php } else { ?>
-                <?php require_once "../Components/chat-room.php"; ?>
-            <?php } ?>
-
-            <?php require_once "../Components/themes.php"; ?>
+            <?php require_once "../Components/searchFriend.php"; ?>
+            
         </div>
 
         <?php require_once "../Components/sidebar3.php"; ?>
 
-  
-
     </div>
 </div>
-
-
-
 
 <?php require_once "../Components/footer.php"; ?>

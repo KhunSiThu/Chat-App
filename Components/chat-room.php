@@ -56,11 +56,11 @@ if (isset($_SESSION['chooseFri'])) {
 } else {
 ?>
 
-<section class="no-chat-con">
+<!-- <section class="no-chat-con">
     <div>
         <img src="../Images/chat.png" alt="">
         <h1>Chat!</h1>
     </div>
-</section>
+</section> -->
 
 <?php } ?>

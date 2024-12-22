@@ -5,9 +5,9 @@
 
 </body>
 
-<script src="../Resources/JS/chat-room.js"></script>
+<!-- <script src="../Resources/JS/chat-room.js"></script> -->
 <script src="../Resources/JS/main-page.js"></script>
-<script src="../Resources/JS/theme.js"></script>
+<!-- <script src="../Resources/JS/theme.js"></script> -->
 
 <!-- <script src="../node_modules/flyonui/flyonui.js"></script> -->
 

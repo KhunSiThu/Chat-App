@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="../../Resources/CSS/output.css">
 
     <link rel="stylesheet" href="../../Resources/CSS/app.css">
-    <link rel="stylesheet" href="../../Resources/CSS/mobile.css">
 
     <style>
         #chatBox {
@@ -27,7 +26,7 @@
             right: 30px;
             z-index: 500;
 
-            display: flex;
+            display: none;
             align-items: center;
 
             span {
@@ -47,7 +46,17 @@
         #chatBox:hover span {
             display: block;
         }
+        
+        .loading-con {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
     </style>
+
+<link rel="stylesheet" href="../../Resources/CSS/mobile.css">
 
 </head>
 

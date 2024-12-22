@@ -1,0 +1,168 @@
+.mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile-view {
+        #sidebar2,#sidebar3 {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #sidebar2 {
+
+            .log-con {
+                img {
+                    width: 40px;
+                }
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+            
+            .side2-header {
+                background-color: var(--color-white);
+            }
+
+            .mob-menu-btns {
+
+            }
+
+            .add-friend-btn {
+                background-color: var(--color-white);
+            }
+        }
+
+        #sidebar3 {
+
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            display: none;
+
+            .menuCloseBtn {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+            }
+
+            .user-profile a{
+                width: 100%;
+            }
+
+            ul li {
+                margin-bottom: 30px;
+
+                a {
+                    padding: 15px;
+                    font-size: 18px;
+                    border:1px solid var(--color-white);
+                }
+            }
+            
+        }
+
+
+        .customize-theme {
+            
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+
+            .card {
+                width: 95%;
+                margin: 0;
+                background: rgb(0, 0, 0);
+                border: 1px solid var(--color-white);
+                padding: 20px 10px;
+
+                h4 {
+                    margin: 10px;
+                }
+            }
+
+            .choose-bg {
+                width: 100%;
+            
+
+                div {
+                    width: 33%;
+                    span {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    h6 {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .searchFriend-con {
+            width: 100vw;
+            height: 100vh;
+
+            .searchFriend {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                
+            }
+
+            .search-con {
+                background-color: var(--color-white);
+                border-radius: 0;
+
+                display: flex;
+                justify-content: space-between;
+
+                form {
+                    width: 85%;
+
+                    i {
+                        font-size: 15px;
+                    }
+                }
+            }
+            
+        }
+
+        .chat-room {
+            width: 100vw;
+
+            .fri-pro {
+                width: 70vw;
+            }
+
+            .chat-container {
+                padding: 15px;
+                height: 81vh;
+            }
+
+            #send-message-form {
+                height: 10vh;
+               padding: 20px;
+               align-items: center;
+               i{
+                font-size: 25px;
+               }
+
+               div input {
+                margin-left: 10px;
+               }
+            }
+        }
+    }
+}

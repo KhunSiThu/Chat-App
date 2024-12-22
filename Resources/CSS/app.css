@@ -35,6 +35,12 @@
     border: 0;
 }
 
+
+
+#mobile {
+    display: none;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     color: var(--color-dark);
@@ -149,16 +155,16 @@ i:hover {
     display: none;
 }
 
-#main-page {
+#sidebar1,
+#sidebar2,
+#sidebar3 {
+    width: 20vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--color-white);
+}
 
-    #sidebar1,
-    #sidebar2,
-    #sidebar3 {
-        width: 20vw;
-        height: 100vh;
-        overflow: hidden;
-        background: var(--color-white);
-    }
+#main-page {
 
     .main-container {
         width: 60vw;
@@ -272,7 +278,7 @@ i:hover {
     }
 }
 
-#main-page #sidebar3 {
+#sidebar3 {
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -284,7 +290,7 @@ i:hover {
     }
 
     .menu {
-        height: 45vh;
+        height: 55vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -331,7 +337,7 @@ i:hover {
 
     .friReq-list {
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         padding: 20px;
         overflow: auto;
         scrollbar-width: none;
@@ -669,7 +675,6 @@ i:hover {
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-
 }
 
 .customize-theme .choose-bg>div {
@@ -713,4 +718,3 @@ i:hover {
 .desk-dis-none {
     display: none;
 }
-

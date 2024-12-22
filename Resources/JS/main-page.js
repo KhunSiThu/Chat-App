@@ -46,32 +46,50 @@ addFriendBtn.addEventListener("click", () => {
     document.querySelector('#search-link').click(); // Trigger search link
 });
 
-// Mobile phone view menu
-const mainContainer = document.querySelector(".main-container");
 
-const friReqShowBtn = document.querySelector(".friReq-show-btn");
+// Mobile 
 const menuShowBtn = document.querySelector(".menu-show-btn");
-const sidebar2 = document.querySelector("#sidebar2");
-const sidebar3 = document.querySelector("#sidebar3");
+const friListShowBtn = document.querySelector(".friListShowBtn");
+const sidebar2 = document.querySelector("#main-page #sidebar2");
+const sidebar3 = document.querySelector("#main-page #sidebar3");
+const chatBox = document.querySelector("#chatBox");
 
-// Handle menu visibility on mobile
-menuShowBtn.addEventListener("click", () => {
-    sidebar3.style.display = 'flex'; // Show the mobile sidebar
-    sidebar2.style.display = "none"; // Hide the other sidebar
-    document.querySelector("#sidebar3 .menu").style.display = "flex"; // Show the menu in sidebar
-
-    document.querySelector(".phone-menu-close").addEventListener("click", () => {
-        sidebar3.style.display = 'none'; // Hide the mobile sidebar
-        sidebar2.style.display = "block"; // Show the original sidebar
-    });
-
-    theme.classList.add("phoneTheme"); // Add phone theme class
-
-    const phoneTheme = document.querySelector(".phoneTheme");
-
-    // Close sidebar when theme icon is clicked
-    phoneTheme.addEventListener("click", () => {
-        sidebar3.style.display = 'none'; // Hide sidebar
-        mainContainer.style.display = "block"; // Show the main container
-    });
+menuShowBtn.addEventListener("click" , () => {
+    sidebar2.style.display = 'none';
+    sidebar3.style.display = 'flex';
+    document.querySelector(".friReq-list-con").style.display = 'none';
 });
+
+friListShowBtn.addEventListener("click" , () => {
+    sidebar2.style.display = 'none';
+    sidebar3.style.display = 'flex';
+    document.querySelector(".menu").style.display = 'none';
+    document.querySelector(".menuCloseBtn").style.display = 'none';
+    chatBox.style.display = "block";
+
+});
+
+document.querySelector(".menuCloseBtn").addEventListener("click" , () => {
+    sidebar2.style.display = '';
+    sidebar3.style.display = '';
+    document.querySelector(".friReq-list-con").style.display = '';
+    document.querySelector(".menu").style.display = '';
+})
+
+// document.querySelector(".friReqCloseBtn").addEventListener("click" , () => {
+//     sidebar2.style.display = '';
+//     sidebar3.style.display = 'none';
+//     document.querySelector(".friReq-list-con").style.display = '';
+//     document.querySelector(".menu").style.display = '';
+// })
+
+document.querySelector(".themeCloseBtn").addEventListener("click", () => {
+    sidebar3.style.display = 'flex';
+    document.querySelector(".customize-theme").style.display = 'none';
+    document.querySelector(".main-container").style.display = "none";
+    chatBox.style.display = "block";
+})
+
+
+
+

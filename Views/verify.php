@@ -76,6 +76,10 @@ if (!isset($_GET['sendCode'])) {
       pointer-events: none;
     }
 
+    p {
+      opacity: 0.5;
+    }
+
     form button.active {
       background: #4070f4;
       pointer-events: auto;
@@ -90,7 +94,7 @@ if (!isset($_GET['sendCode'])) {
       <i class="fa-solid fa-envelope-open-text fa-bounce"></i>
     </header>
     <h4 class="text-xl font-medium text-gray-800">Verification Code</h4>
-    <p class="text-center">Please enter 4 digit verification code we sent to <br><?= $row['email'] ?></p>
+    <p class="text-center ">Please enter 4 digit verification code we sent to <br><?= $row['email'] ?></p>
     <form action="./verify.php?sendCode='varify'" method="post">
       <div class="flex space-x-2">
         <input name="c1"

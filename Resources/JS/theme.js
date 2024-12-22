@@ -1,5 +1,6 @@
 // Theme customization logic
 const theme = document.querySelector("#theme");
+const mobTheme = document.querySelector("#mobTheme");
 const themeModal = document.querySelector(".customize-theme");
 const fontSizes = document.querySelectorAll(".fontSize");
 var root = document.querySelector(":root");
@@ -44,6 +45,11 @@ const closeThemeModal = (e) => {
 
 themeModal.addEventListener("click", closeThemeModal);
 theme.addEventListener("click", openThemeModal);
+mobTheme.addEventListener("click", () => {
+    openThemeModal();
+    document.querySelector(".main-container").style.display = "block";
+    document.querySelector("#main-page #sidebar3").style.display = "none";
+})
 
 // Function to remove the active class from all font size selectors
 const removeSizeSelector = () => {

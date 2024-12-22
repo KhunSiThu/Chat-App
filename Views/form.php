@@ -18,7 +18,6 @@ if ($_SESSION['unique_id']) {
 }
 
 ?>
-
 <div class="desktop">
     <!-- Sign Up -->
     <div class="index signUp flex w-screen h-screen justify-center items-center 
@@ -28,7 +27,7 @@ if ($_SESSION['unique_id']) {
 
     ">
         <div class="flex flex-col min-w-full justify-center p-10 lg:px-8">
-            <div class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center items-center">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center items-center" id="desktop">
                 <div class="chatLog-con flex justify-center items-center">
                     <img class="" src="../Images/chat.png" alt="Your Company" />
                 </div>
@@ -177,7 +176,6 @@ if ($_SESSION['unique_id']) {
 
     
 </div>
-
 </body>
 
 <script src="../Resources/JS/index.js"></script>

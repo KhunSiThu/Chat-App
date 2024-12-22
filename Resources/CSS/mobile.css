@@ -1,40 +1,116 @@
-.mobile {
-    display: none;
-}
-
 @media (max-width: 600px) {
 
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
+    #mobile {
         display: block;
     }
 
-    .mobile-view {
-        #sidebar2,#sidebar3 {
+    #desktop {
+        display: none;
+    }
+
+
+    i {
+        font-size: 16px;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+
+        .main-container {
+            display: none;
             width: 100vw;
-            height: 100vh;
+            padding: 0;
+
+            .searchFriend-con .searchFriend{
+                width: 100vw;
+            }
+
+            .customize-theme {
+                width: 100vw;
+                padding: 0;
+                z-index: 100;
+                position: absolute;
+                top: 0;
+
+                .themeCloseBtn {
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    z-index: 200;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+
+                .card {
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    border-radius: 0;
+                    z-index: 100;
+                    justify-content: center;
+                    background: rgba(0, 0, 0, 0.878);
+
+                    h4 {
+                        margin-bottom: 30px;
+                    }
+
+                    .choose-bg {
+                        width: 100%;
+                        padding: 0;
+                    }
+
+                    .choose-bg>div {
+                        width: 30%;
+                        padding: 10px;
+
+                        span {
+                            width: 14px;
+                            height: 14px;
+                            padding: 0;
+                        }
+
+                        h5 {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
         }
 
-        #sidebar2 {
+        .profile-con {
+            width: 100px;
+        }
 
-            .log-con {
+        .upProfile-btns {
+            button {
+                width: 100px;
+            }
+        }
+
+        /* Friend List */
+        #main-page #sidebar2 {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--color-light);
+
+
+
+            .side2-header {
+                background-color: var(--color-white);
+
+                h1 {
+                    font-size: 20px;
+                }
+
                 img {
                     width: 40px;
                 }
 
-                h1 {
-                    font-size: 30px;
+                .mob-menu-btns i {
+                    font-size: 20px;
                 }
-            }
-            
-            .side2-header {
-                background-color: var(--color-white);
-            }
-
-            .mob-menu-btns {
 
             }
 
@@ -43,126 +119,79 @@
             }
         }
 
-        #sidebar3 {
 
+    }
+
+
+    #sidebar3 {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        background-color: var(--color-light);
+
+        .menu,.friReq-list-con {
+            width: 100%;          
+        }
+
+        .menu {
+            height: 75%;
+
+            li a {
+                border-color: var(--color-white);
+
+                svg {
+                    color: var(--color-primary);
+                }
+            }
+        }
+
+        .friReq-list-con {
+
+            padding: 0;
             height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 20px;
-            display: none;
 
-            .menuCloseBtn {
-                position: absolute;
-                top: 30px;
-                right: 30px;
-            }
-
-            .user-profile a{
-                width: 100%;
-            }
-
-            ul li {
-                margin-bottom: 30px;
+            h2 {
+                margin: 0;
+                background-color: var(--color-white);
+                height: 9vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                font-size: 20px;
 
                 a {
-                    padding: 15px;
-                    font-size: 18px;
-                    border:1px solid var(--color-white);
-                }
-            }
-            
-        }
-
-
-        .customize-theme {
-            
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-
-            .card {
-                width: 95%;
-                margin: 0;
-                background: rgb(0, 0, 0);
-                border: 1px solid var(--color-white);
-                padding: 20px 10px;
-
-                h4 {
-                    margin: 10px;
-                }
-            }
-
-            .choose-bg {
-                width: 100%;
-            
-
-                div {
-                    width: 33%;
-                    span {
-                        width: 10px;
-                        height: 10px;
-                    }
-
-                    h6 {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-
-        .searchFriend-con {
-            width: 100vw;
-            height: 100vh;
-
-            .searchFriend {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                
-            }
-
-            .search-con {
-                background-color: var(--color-white);
-                border-radius: 0;
-
-                display: flex;
-                justify-content: space-between;
-
-                form {
-                    width: 85%;
-
+                    position: fixed;
+                    left: 20px;
+                   
+                    
                     i {
-                        font-size: 15px;
+                        font-size: 20px;
+                       
                     }
                 }
             }
-            
+
+            .friReq-list {
+                height: 91vh;
+            }
+
         }
 
-        .chat-room {
-            width: 100vw;
-
-            .fri-pro {
-                width: 70vw;
-            }
-
-            .chat-container {
-                padding: 15px;
-                height: 81vh;
-            }
-
-            #send-message-form {
-                height: 10vh;
-               padding: 20px;
-               align-items: center;
-               i{
-                font-size: 25px;
-               }
-
-               div input {
-                margin-left: 10px;
-               }
+        .menuCloseBtn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            
+            i {
+                font-size: 30px;
             }
         }
     }
+
 }
+
+

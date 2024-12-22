@@ -1,5 +1,5 @@
 <?php
-include_once "../Controller/db_connect.php";  
+include_once "../Controller/db_connect.php";
 session_start();
 
 // Check if the user is logged in
@@ -20,8 +20,12 @@ $youData = $result->fetch_assoc();
 
 ?>
 
-<nav id="sidebar3" class="desk-side-3 transition-all duration-500 z-[100]">
-    <ul class="menu rounded-box w-full" id="phone-menu">
+
+
+<nav id="sidebar3" class="sidebar3 transition-all duration-500 z-[100]">
+
+    <button class="menuCloseBtn" id="mobile"><i class="fa-solid fa-xmark"></i></button>
+    <ul class="menu rounded-box w-full">
         <div class="flex w-full justify-end">
             <a href="../main-page.php">
                 <i class="fa-solid fa-xmark text-3xl fa-fade desk-dis-none"></i>
@@ -36,6 +40,16 @@ $youData = $result->fetch_assoc();
                     <h1 class="text-2xl whitespace-nowrap"><?= htmlspecialchars($youData['name']) ?></h1>
                     <p class="text-xs whitespace-nowrap text-muted"><?= htmlspecialchars($youData['email']) ?></p>
                 </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                </svg>
+
+                Chat Box
             </a>
         </li>
 
@@ -60,8 +74,16 @@ $youData = $result->fetch_assoc();
         </li>
 
         <!-- Theme Links -->
-        <li class="phone-dis-none">
+        <li id="desktop">
             <a id="theme">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                </svg>
+                Theme Settings
+            </a>
+        </li>
+        <li id="mobile">
+            <a id="mobTheme">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
                 </svg>
@@ -81,8 +103,9 @@ $youData = $result->fetch_assoc();
         </li>
 
     </ul>
-    <hr>
-    <div class="friReq-list-con">
+    <hr id="desktop">
+    <div class="friReq-list-con ">
+
         <!-- Friend requests will be shown here -->
     </div>
 </nav>

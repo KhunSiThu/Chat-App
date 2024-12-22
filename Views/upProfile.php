@@ -1,5 +1,5 @@
 <?php
-include_once "../Controller/db_connect.php";  
+include_once "../Controller/db_connect.php";
 
 session_start();
 
@@ -11,7 +11,7 @@ $sql = "SELECT * FROM users WHERE unique_id = $uniqueId";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
-$defaultImage = "../Images/".$row['gender'].".webp"; 
+$defaultImage = "../Images/" . $row['gender'] . ".webp";
 $profileImage = isset($row['profile_image']) ? $row['profile_image'] : $defaultImage;
 
 ?>
@@ -24,27 +24,63 @@ $profileImage = isset($row['profile_image']) ? $row['profile_image'] : $defaultI
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Update Profile</title>
   <link rel="stylesheet" href="../Resources/CSS/output.css">
+  <link rel="stylesheet" href="../Resources/CSS/mobile.css">
 </head>
 
 <style>
-  .profile-con {
+  body {
+    .profile-con {
 
-    button {
       width: 350px;
-      opacity: 0;
       height: 350px;
-      display: flex;
-      justify-content: center;
-      position: absolute;
-      top: 0;
-      color: white;
-      font-size: 40px;
+      ;
+
+      button {
+        width: 350px;
+        opacity: 0;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        color: white;
+        font-size: 40px;
+      }
+
+      button:hover {
+        background-color: rgba(0, 0, 0, 0.77);
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    #desktop {
+      display: none;
     }
 
-    button:hover {
-      background-color: rgba(0, 0, 0, 0.77);
-      opacity: 1;
+    #mobile {
+      display: block;
     }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+
+      .profile-con {
+        width: 250px;
+        height: 250px;
+
+        button {
+          width: 250px;
+        height: 250px;
+        }
+      }
+    }
+
+
+
   }
 </style>
 
@@ -58,7 +94,7 @@ $profileImage = isset($row['profile_image']) ? $row['profile_image'] : $defaultI
 
       <!-- Profile Image -->
       <div class="flex p-6 justify-center mb-8">
-        <div class="relative group profile-con" style="width: 350px; height: 350px;">
+        <div class="relative group profile-con">
           <!-- Profile Image -->
           <img id="profile-image"
             src="<?= $profileImage ?>"
@@ -75,7 +111,7 @@ $profileImage = isset($row['profile_image']) ? $row['profile_image'] : $defaultI
 
 
       <!-- Action Buttons -->
-      <div class="flex justify-evenly gap-8 space-x-6">
+      <div class="flex justify-evenly gap-8 space-x-6 upProfile-btns">
         <button id="cancel-button" type="button" class="py-3 w-full bg-red-600 text-white rounded-lg text-lg font-medium shadow-md hover:bg-red-700 transition">Skip</button>
         <button type="submit" class="py-3 w-full text-white rounded-lg text-lg font-medium shadow-md transition bg-cyan-400 hover:bg-cyan-500">Confirm</button>
       </div>

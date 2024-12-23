@@ -21,13 +21,17 @@
     <hr id="hr" />
 
     <div class="friList-con">
-        <ul class="friend-list mt-1">
+        <ul class="userFriendList mt-1">
            
         </ul>
     </div>
 
     <!-- Add Friend Button -->
-    <button class="add-friend-btn btn-primary">
+    <button class="add-friend-btn btn-primary deskAddFri" id="desktop">
+        <i class="fa-solid fa-user-plus"></i>
+    </button>
+
+    <button class="add-friend-btn btn-primary mobAddFri" id="mobile">
         <i class="fa-solid fa-user-plus"></i>
     </button>
 

@@ -1,3 +1,11 @@
+#mobFlex {
+    display: none;
+}
+
+#mobile {
+    display: none;
+}
+
 @media (max-width: 600px) {
 
     #chatBox {
@@ -10,6 +18,10 @@
 
     #desktop {
         display: none;
+    }
+
+    #mobFlex {
+        display: flex;
     }
 
 
@@ -26,38 +38,81 @@
             width: 100vw;
             padding: 0;
 
+            .chat-room {
+                width: 100vw;
+
+                h1 {
+                    font-size: 16px;
+                }
+
+                .chatPro-con {
+                    width: 70%;
+                }
+
+                .sendText {
+                    margin-left: 20px;
+                }
+            }
+
             .searchFriend-con .searchFriend{
                 width: 100vw;
+                padding: 0px;
+                background-color: var(--color-light);
+
+                .search-con {
+                    width: 100%;
+                    margin: 0;
+                    border-radius: 0;
+                    padding: 30px;
+                    height: 10vh;
+                    background-color: var(--color-white)
+                }
             }
 
             .customize-theme {
                 width: 100vw;
+                height: 100vh;
                 padding: 0;
                 z-index: 100;
                 position: absolute;
                 top: 0;
+                align-items: flex-start;
+                background-color: var(--color-light);
+
+                h2 {
+                    background-color: var(--color-white);
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    height: 10vh;
+                }
 
                 .themeCloseBtn {
-                    position: absolute;
-                    top: 30px;
-                    right: 30px;
-                    z-index: 200;
-                    i {
-                        font-size: 20px;
-                    }
+                   i {
+                    font-size: 20px;
+                   }
                 }
 
                 .card {
                     width: 100%;
-                    height: 100%;
-                    padding: 10px;
+                    height: 50%;
+                    padding: 0;
                     border-radius: 0;
-                    z-index: 100;
-                    justify-content: center;
-                    background: rgba(0, 0, 0, 0.878);
+                    
+   
+                    .s {
+                        padding: 0 30px;
+                    }
+
+                    .background {
+                        
+                    }
 
                     h4 {
                         margin-bottom: 30px;
+                        font-size: 18px;
                     }
 
                     .choose-bg {
@@ -68,6 +123,7 @@
                     .choose-bg>div {
                         width: 30%;
                         padding: 10px;
+                        height: 100px;
 
                         span {
                             width: 14px;

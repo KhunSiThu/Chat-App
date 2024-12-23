@@ -17,9 +17,8 @@ $uniqueId = $_SESSION['unique_id'];
 
         <?php require_once "../Components/sidebar2.php"; ?>
 
-        <div class="main-container">
-            <?php require_once "../Components/searchFriend.php"; ?>
-            
+        <div class="main-container themeCon">
+           
         </div>
 
         <?php require_once "../Components/sidebar3.php"; ?>
